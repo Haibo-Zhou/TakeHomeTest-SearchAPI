@@ -1,0 +1,6 @@
+framework module Pods_DySearchAPI {
+  umbrella header "Pods-DySearchAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

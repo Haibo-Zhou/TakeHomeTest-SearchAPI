@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		1367ED2224A492DC00FC75F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED2124A492DC00FC75F4 /* ViewController.swift */; };
 		1367ED2724A492E500FC75F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED2624A492E500FC75F4 /* Assets.xcassets */; };
 		1367ED2A24A492E500FC75F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED2824A492E500FC75F4 /* LaunchScreen.storyboard */; };
+		1367ED3424A5AB0900FC75F4 /* mock-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED3324A5AB0900FC75F4 /* mock-data.json */; };
 		95653823359D075C06193FF8 /* Pods_DySearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		1367ED2624A492E500FC75F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1367ED2924A492E500FC75F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1367ED2B24A492E500FC75F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1367ED3324A5AB0900FC75F4 /* mock-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mock-data.json"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		51FBE7437E7D3594EC917CC0 /* Pods-DySearchAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.release.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.release.xcconfig"; sourceTree = "<group>"; };
 		7021E14EFAD3059FE9C53552 /* Pods-DySearchAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.debug.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DySearchAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				1367ED2124A492DC00FC75F4 /* ViewController.swift */,
 				1367ED2624A492E500FC75F4 /* Assets.xcassets */,
 				1367ED2824A492E500FC75F4 /* LaunchScreen.storyboard */,
+				1367ED3324A5AB0900FC75F4 /* mock-data.json */,
 				1367ED2B24A492E500FC75F4 /* Info.plist */,
 			);
 			path = DySearchAPI;
@@ -85,7 +88,6 @@
 				7021E14EFAD3059FE9C53552 /* Pods-DySearchAPI.debug.xcconfig */,
 				51FBE7437E7D3594EC917CC0 /* Pods-DySearchAPI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1367ED2A24A492E500FC75F4 /* LaunchScreen.storyboard in Resources */,
+				1367ED3424A5AB0900FC75F4 /* mock-data.json in Resources */,
 				1367ED2724A492E500FC75F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

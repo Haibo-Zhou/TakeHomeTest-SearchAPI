@@ -13,6 +13,10 @@
 		1367ED2724A492E500FC75F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED2624A492E500FC75F4 /* Assets.xcassets */; };
 		1367ED2A24A492E500FC75F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED2824A492E500FC75F4 /* LaunchScreen.storyboard */; };
 		1367ED3424A5AB0900FC75F4 /* mock-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 1367ED3324A5AB0900FC75F4 /* mock-data.json */; };
+		1367ED3724A6DAA000FC75F4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED3624A6DAA000FC75F4 /* Product.swift */; };
+		1367ED3C24A6E3F400FC75F4 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED3B24A6E3F400FC75F4 /* WebService.swift */; };
+		1367ED3E24A6E55C00FC75F4 /* GCDServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED3D24A6E55C00FC75F4 /* GCDServer.swift */; };
+		1367ED4124A6E62900FC75F4 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED4024A6E62900FC75F4 /* JsonLoader.swift */; };
 		95653823359D075C06193FF8 /* Pods_DySearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		1367ED2924A492E500FC75F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1367ED2B24A492E500FC75F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1367ED3324A5AB0900FC75F4 /* mock-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mock-data.json"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		1367ED3624A6DAA000FC75F4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1367ED3B24A6E3F400FC75F4 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1367ED3D24A6E55C00FC75F4 /* GCDServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDServer.swift; sourceTree = "<group>"; };
+		1367ED4024A6E62900FC75F4 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		51FBE7437E7D3594EC917CC0 /* Pods-DySearchAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.release.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.release.xcconfig"; sourceTree = "<group>"; };
 		7021E14EFAD3059FE9C53552 /* Pods-DySearchAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.debug.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DySearchAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,15 +71,51 @@
 		1367ED1C24A492DC00FC75F4 /* DySearchAPI */ = {
 			isa = PBXGroup;
 			children = (
+				1367ED3F24A6E60500FC75F4 /* Systems */,
+				1367ED3A24A6E3E100FC75F4 /* Networking */,
+				1367ED3524A6DA6B00FC75F4 /* Models */,
 				1367ED1D24A492DC00FC75F4 /* AppDelegate.swift */,
 				1367ED1F24A492DC00FC75F4 /* SceneDelegate.swift */,
 				1367ED2124A492DC00FC75F4 /* ViewController.swift */,
-				1367ED2624A492E500FC75F4 /* Assets.xcassets */,
-				1367ED2824A492E500FC75F4 /* LaunchScreen.storyboard */,
-				1367ED3324A5AB0900FC75F4 /* mock-data.json */,
-				1367ED2B24A492E500FC75F4 /* Info.plist */,
+				1367ED3824A6E39000FC75F4 /* Resources */,
 			);
 			path = DySearchAPI;
+			sourceTree = "<group>";
+		};
+		1367ED3524A6DA6B00FC75F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1367ED3624A6DAA000FC75F4 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1367ED3824A6E39000FC75F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1367ED3324A5AB0900FC75F4 /* mock-data.json */,
+				1367ED2624A492E500FC75F4 /* Assets.xcassets */,
+				1367ED2824A492E500FC75F4 /* LaunchScreen.storyboard */,
+				1367ED2B24A492E500FC75F4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1367ED3A24A6E3E100FC75F4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1367ED3B24A6E3F400FC75F4 /* WebService.swift */,
+				1367ED3D24A6E55C00FC75F4 /* GCDServer.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1367ED3F24A6E60500FC75F4 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				1367ED4024A6E62900FC75F4 /* JsonLoader.swift */,
+			);
+			path = Systems;
 			sourceTree = "<group>";
 		};
 		AD86A7A2F49B55EEFAC36BC8 /* Frameworks */ = {
@@ -206,8 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1367ED4124A6E62900FC75F4 /* JsonLoader.swift in Sources */,
 				1367ED2224A492DC00FC75F4 /* ViewController.swift in Sources */,
+				1367ED3E24A6E55C00FC75F4 /* GCDServer.swift in Sources */,
+				1367ED3724A6DAA000FC75F4 /* Product.swift in Sources */,
 				1367ED1E24A492DC00FC75F4 /* AppDelegate.swift in Sources */,
+				1367ED3C24A6E3F400FC75F4 /* WebService.swift in Sources */,
 				1367ED2024A492DC00FC75F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV97A5VZCV;
-				INFOPLIST_FILE = DySearchAPI/Info.plist;
+				INFOPLIST_FILE = DySearchAPI/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BV97A5VZCV;
-				INFOPLIST_FILE = DySearchAPI/Info.plist;
+				INFOPLIST_FILE = DySearchAPI/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

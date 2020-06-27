@@ -17,32 +17,22 @@ class BrandViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        setupTableView()
+        tableView.register(ProductCell.self, forCellReuseIdentifier: "productCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+        view.addSubview(tableView)
+        
+        navigationItem.title = "Search"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         // Start GCDWebServer
         mockServer.initWebServer()
     }
     
-    func setupTableView() {
-        view.addSubview(tableView)
-
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "productCell")
-        
-        navigationItem.title = "Search"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -56,9 +46,10 @@ extension BrandViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
-        cell.textLabel?.text = products[indexPath.row].brandName
-        cell.detailTextLabel?.text = "In-stock"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
+        cell.brandLabel.text = products[indexPath.row].brandName
+        cell.stockLabel.text = products[indexPath.row].inStock ? "In-stock" : "Out-of-stock"
+        cell.priceLabel.text = String(products[indexPath.row].price)
         return cell
     }
     

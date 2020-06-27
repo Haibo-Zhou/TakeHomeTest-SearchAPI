@@ -15,7 +15,7 @@ class ProductCell: UITableViewCell {
         label.backgroundColor = .clear
         label.numberOfLines = 1
         label.font = .boldSystemFont(ofSize: 20)
-        label.textColor = .black
+        label.textColor = .textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -25,7 +25,7 @@ class ProductCell: UITableViewCell {
         label.backgroundColor = .clear
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 15)
-        label.textColor = .gray
+        label.textColor = .textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -35,7 +35,7 @@ class ProductCell: UITableViewCell {
         label.backgroundColor = .clear
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 17)
-        label.textColor = .black
+        label.textColor = .textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -64,10 +64,9 @@ class ProductCell: UITableViewCell {
         super.layoutSubviews()
         brandLabel.frame = CGRect(x: CommonInsets.left, y: 20, width: bounds.width - CommonInsets.left - CommonInsets.right, height: 30)
         stockLabel.frame = CGRect(x: CommonInsets.left, y: brandLabel.frame.maxY, width: brandLabel.frame.width, height: 30)
-        print("maxY: \(brandLabel.frame.maxY)")
         
         priceLabel.frame = CGRect(x: bounds.width - 80, y: (bounds.height / 2) - 9, width: 70, height: 18)
-        print("bounds: \(bounds)")
+
     }
     
 }

@@ -12,9 +12,18 @@ class BrandViewController: UIViewController {
     let mockServer = GCDServer()
     let tableView = UITableView()
     private let products = ProductAPI.loadProducts()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Search Bar config
+//        setupSearchBarListeners()
+        navigationItem.searchController = searchController
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Search"
+        
         view.backgroundColor = .white
         
         tableView.register(ProductCell.self, forCellReuseIdentifier: "productCell")
@@ -22,12 +31,16 @@ class BrandViewController: UIViewController {
         tableView.delegate = self
         view.addSubview(tableView)
         
-        navigationItem.title = "Search"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
         // Start GCDWebServer
         mockServer.initWebServer()
     }
+    
+//    fileprivate func setupSearchBarListeners() {
+//        let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
+//        publisher.sink { (notification) in
+//            print(123)
+//        }
+//    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -48,8 +61,8 @@ extension BrandViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
         cell.brandLabel.text = products[indexPath.row].brandName
-        cell.stockLabel.text = products[indexPath.row].inStock ? "In-stock" : "Out-of-stock"
-        cell.priceLabel.text = String(products[indexPath.row].price)
+//        cell.stockLabel.text = products[indexPath.row].inStock ? "In-stock" : "Out-of-stock"
+//        cell.priceLabel.text = String(products[indexPath.row].price)
         return cell
     }
     

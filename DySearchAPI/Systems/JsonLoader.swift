@@ -15,6 +15,7 @@ class JsonLoader {
             if let bundlePath = Bundle.main.path(forResource: name,
                                                  ofType: "json"),
                 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                print("hahah: ",jsonData )
                 return jsonData
             }
         } catch {

@@ -101,11 +101,11 @@
 				1367ED3F24A6E60500FC75F4 /* Systems */,
 				1367ED3A24A6E3E100FC75F4 /* Networking */,
 				1367ED3524A6DA6B00FC75F4 /* Models */,
+				1367ED3824A6E39000FC75F4 /* Resources */,
 				1367ED1D24A492DC00FC75F4 /* AppDelegate.swift */,
 				1367ED1F24A492DC00FC75F4 /* SceneDelegate.swift */,
 				1367ED2124A492DC00FC75F4 /* Deprecated-BrandViewController.swift */,
 				1367ED9224A84FBB00FC75F4 /* ProductSearchApp.swift */,
-				1367ED3824A6E39000FC75F4 /* Resources */,
 			);
 			path = DySearchAPI;
 			sourceTree = "<group>";

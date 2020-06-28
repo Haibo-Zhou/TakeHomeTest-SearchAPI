@@ -6,6 +6,8 @@
 //  Copyright © 2020 Haibo Family. All rights reserved.
 //
 
+// Removed as switch to SwiftUI from UIKit.
+
 //import UIKit
 //
 //class BrandViewController: UIViewController {

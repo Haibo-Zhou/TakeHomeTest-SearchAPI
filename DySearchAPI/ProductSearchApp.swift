@@ -12,8 +12,6 @@ struct ProductSearchApp: View {
     
     @ObservedObject var model = ProductListViewModel()
     @State private var searchText: String = ""
-//    @State private var selectedId = -1
-//    @State private var showSheet = false
     @State private var page = 1
     @State private var idx = 0
     

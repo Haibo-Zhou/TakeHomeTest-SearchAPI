@@ -22,6 +22,8 @@
 		1367ED6824A7209500FC75F4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED6724A7209500FC75F4 /* Theme.swift */; };
 		1367ED6A24A7B43C00FC75F4 /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED6924A7B43B00FC75F4 /* ClientAPI.swift */; };
 		1367ED6C24A7B9AB00FC75F4 /* PublisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED6B24A7B9AB00FC75F4 /* PublisherError.swift */; };
+		1367ED6F24A83DF000FC75F4 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED6E24A83DEF00FC75F4 /* ProductViewModel.swift */; };
+		1367ED7124A84BF700FC75F4 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367ED7024A84BF600FC75F4 /* ProductListViewModel.swift */; };
 		95653823359D075C06193FF8 /* Pods_DySearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		1367ED6724A7209500FC75F4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1367ED6924A7B43B00FC75F4 /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
 		1367ED6B24A7B9AB00FC75F4 /* PublisherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherError.swift; sourceTree = "<group>"; };
+		1367ED6E24A83DEF00FC75F4 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		1367ED7024A84BF600FC75F4 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		51FBE7437E7D3594EC917CC0 /* Pods-DySearchAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.release.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.release.xcconfig"; sourceTree = "<group>"; };
 		7021E14EFAD3059FE9C53552 /* Pods-DySearchAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DySearchAPI.debug.xcconfig"; path = "Target Support Files/Pods-DySearchAPI/Pods-DySearchAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		E08C9E5EA17E374FFF264A4C /* Pods_DySearchAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DySearchAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,7 @@
 		1367ED1C24A492DC00FC75F4 /* DySearchAPI */ = {
 			isa = PBXGroup;
 			children = (
+				1367ED6D24A83DCB00FC75F4 /* View Models */,
 				1367ED4424A7079F00FC75F4 /* Views */,
 				1367ED3F24A6E60500FC75F4 /* Systems */,
 				1367ED3A24A6E3E100FC75F4 /* Networking */,
@@ -139,6 +144,15 @@
 				1367ED4524A707C600FC75F4 /* ProductCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1367ED6D24A83DCB00FC75F4 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1367ED6E24A83DEF00FC75F4 /* ProductViewModel.swift */,
+				1367ED7024A84BF600FC75F4 /* ProductListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		AD86A7A2F49B55EEFAC36BC8 /* Frameworks */ = {
@@ -278,10 +292,12 @@
 				1367ED3E24A6E55C00FC75F4 /* GCDServer.swift in Sources */,
 				1367ED6C24A7B9AB00FC75F4 /* PublisherError.swift in Sources */,
 				1367ED3724A6DAA000FC75F4 /* Product.swift in Sources */,
+				1367ED6F24A83DF000FC75F4 /* ProductViewModel.swift in Sources */,
 				1367ED1E24A492DC00FC75F4 /* AppDelegate.swift in Sources */,
 				1367ED3C24A6E3F400FC75F4 /* WebService.swift in Sources */,
 				1367ED4624A707C700FC75F4 /* ProductCell.swift in Sources */,
 				1367ED6A24A7B43C00FC75F4 /* ClientAPI.swift in Sources */,
+				1367ED7124A84BF700FC75F4 /* ProductListViewModel.swift in Sources */,
 				1367ED6824A7209500FC75F4 /* Theme.swift in Sources */,
 				1367ED4324A6FC7600FC75F4 /* ProductAPI.swift in Sources */,
 				1367ED2024A492DC00FC75F4 /* SceneDelegate.swift in Sources */,

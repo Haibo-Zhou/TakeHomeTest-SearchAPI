@@ -6,13 +6,15 @@
 //  Copyright © 2020 Haibo Family. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 struct Product: Codable {
     let brandName: String?
     let productName: String?
     let productCategory: String?
     let inStock: Bool?
-    let price: Float?
+    let price: CGFloat?
     let id: Int?
+    
+    
 }

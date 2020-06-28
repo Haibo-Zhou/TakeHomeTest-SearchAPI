@@ -7,7 +7,7 @@
             "brand_name": "Dyson",
             "product_name": "V11",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 599.99,
             "id": 100
         },
@@ -15,7 +15,7 @@
             "brand_name": "Dyson",
             "product_name": "V10",
             "product_category": "Vacuum",
-            "in-stock": false,
+            "in_stock": false,
             "price": 399.99,
             "id": 101
         },
@@ -23,7 +23,7 @@
             "brand_name": "Dyson",
             "product_name": "Supersonic",
             "product_category": "Hair Dryer",
-            "in-stock": true,
+            "in_stock": true,
             "price": 599,
             "id": 200
         },
@@ -31,7 +31,7 @@
             "brand_name": "Dyson",
             "product_name": "V12",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 102
         },
@@ -39,7 +39,7 @@
             "brand_name": "Dyson",
             "product_name": "V13",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 103
         },
@@ -47,7 +47,7 @@
             "brand_name": "Dyson",
             "product_name": "V14",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 104
         },
@@ -55,7 +55,7 @@
             "brand_name": "Dyson",
             "product_name": "V15",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 105
         },
@@ -63,7 +63,7 @@
             "brand_name": "Dyson",
             "product_name": "V16",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 106
         },
@@ -71,7 +71,7 @@
             "brand_name": "Dyson",
             "product_name": "V17",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 799.99,
             "id": 107
         },
@@ -79,7 +79,7 @@
             "brand_name": "Dyson",
             "product_name": "V18",
             "product_category": "Vacuum",
-            "in-stock": true,
+            "in_stock": true,
             "price": 699.99,
             "id": 108
         }

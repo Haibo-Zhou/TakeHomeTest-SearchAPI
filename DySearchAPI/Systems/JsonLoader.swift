@@ -15,13 +15,11 @@ class JsonLoader {
             if let bundlePath = Bundle.main.path(forResource: name,
                                                  ofType: "json"),
                 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                print("hahah: ",jsonData )
                 return jsonData
             }
         } catch {
             print(error)
         }
-        
         return nil
     }
     
@@ -29,7 +27,7 @@ class JsonLoader {
         if let jsonData = loadFile(forName: name) {
             do {
                 if let jsonDict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
-                    print(jsonDict)
+//                    print(jsonDict)
                     return jsonDict
                 }
             } catch let error as NSError {
@@ -38,6 +36,4 @@ class JsonLoader {
         }
         return nil
     }
-    
-    
 }

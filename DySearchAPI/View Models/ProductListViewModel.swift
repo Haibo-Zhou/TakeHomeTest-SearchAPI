@@ -16,8 +16,8 @@ class ProductListViewModel: ObservableObject {
     
     @Published var searchResults = [ProductViewModel]()
     
-    func getProductSearchResult(for name: String) {
-        webService.getBrandSearchResultsPublisher(for: name)
+    func getProductSearchResult(for name: String, page: Int) {
+        webService.getBrandSearchResultsPublisher(for: name, page: page)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { status in
                 switch status {
@@ -28,7 +28,7 @@ class ProductListViewModel: ObservableObject {
                     break
                 }
             }) { products in
-                self.searchResults = products.map(ProductViewModel.init)
+                self.searchResults = products.results.map(ProductViewModel.init)
         }.store(in: &self.cancellableSet)
     }
     

@@ -25,6 +25,7 @@ struct WebService {
     }()
     
     private func createPublisher<T: Codable>(for url: URL) -> AnyPublisher<T, FailureReason> {
+        print("URL: \(url)")
         return session.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let httpURLResponse = output.response as? HTTPURLResponse,

@@ -21,7 +21,7 @@ class GCDServer {
 //            print("Request Query: \(request.query ?? ["FF":"GG"])")
             
             if let query = request.query {
-                if query["query"] == "dyson" {
+                if query["query"]?.lowercased() == "dyson" {
                     if let page = query["page"], Int(page)! <= 3 {
                         return GCDWebServerDataResponse(jsonObject: JsonLoader().jsonStrToDict(forName: "mock-data-page\(page)") ?? [])
                     } else {

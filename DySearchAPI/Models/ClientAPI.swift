@@ -6,7 +6,7 @@
 //  Copyright © 2020 Haibo Family. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
 struct ClientAPI {
     
@@ -15,7 +15,7 @@ struct ClientAPI {
     
     enum Endpoints {
 
-        static private let baseURL = "http://10.0.0.3:8080"
+        static private let baseURL = "http://iPhone.local:8080"
         static private let apiKeyParam = "?api_key=\(ClientAPI.apiKey)"
 
         case searchBrand(String, Int)

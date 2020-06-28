@@ -6,7 +6,7 @@
 //  Copyright © 2020 Haibo Family. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 import GCDWebServer
 
 class GCDServer {

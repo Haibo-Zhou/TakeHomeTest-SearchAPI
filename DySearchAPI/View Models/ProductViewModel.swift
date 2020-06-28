@@ -16,7 +16,7 @@ struct ProductViewModel: Identifiable, Hashable {
     var productName: String
     var productCategory: String
     var inStock: String
-    var price: Double = 0
+    var price = ""
     
     static var `default` : ProductViewModel {
         get {
@@ -32,7 +32,7 @@ struct ProductViewModel: Identifiable, Hashable {
         self.inStock = ProductViewModel.getStockState(product: product)
         
         if let price = product.price {
-            self.price = Double(price)
+            self.price = "$\(price)"
         }
     }
     

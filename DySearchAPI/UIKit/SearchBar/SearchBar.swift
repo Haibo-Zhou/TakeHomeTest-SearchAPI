@@ -38,6 +38,7 @@ struct SearchBar: UIViewRepresentable {
             text = ""
             searchBar.showsCancelButton = false
             searchBar.endEditing(true)
+            searchBar.backgroundColor = .clear
             // Send back empty string text to search view, trigger ```self.model.searchResults.removeAll()```
             onTextChanged(text)
         }

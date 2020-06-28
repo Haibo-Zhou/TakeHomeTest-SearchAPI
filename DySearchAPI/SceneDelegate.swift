@@ -12,18 +12,10 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-//    let mockServer = GCDServer()
+    let mockServer = GCDServer()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//
-//        let window = UIWindow(windowScene: windowScene)
-//        window.rootViewController = UINavigationController(rootViewController: BrandViewController())
-//        window.makeKeyAndVisible()
-//        self.window = window
-        
-//        mockServer.initWebServer()
         
         let contentView = ProductSearchApp()
         
@@ -56,13 +48,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        mockServer.initWebServer()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-//        mockServer.stopWebServer()
+        mockServer.stopWebServer()
     }
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Haibo Family. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
 //extension UIColor {
 //  // https://github.com/yeahdongcn/UIColor-Hex-Swift/blob/master/HEXColor/UIColorExtension.swift
@@ -19,8 +19,10 @@ import UIKit
 //  }
 //}
 
-extension UIColor {
-    static let textColor = UIColor(named: "textColor")
+extension Color {
+    static let textColor = Color("textColor")
+    static let lightGray = Color("lightGray")
+    static let lightBlue = Color("lightBlue")
 }
 
 let CommonInsets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)

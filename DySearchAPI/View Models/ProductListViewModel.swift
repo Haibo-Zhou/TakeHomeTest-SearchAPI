@@ -15,6 +15,7 @@ class ProductListViewModel: ObservableObject {
     private var cancellableSet: Set<AnyCancellable> = []
     
     @Published var searchResults = [ProductViewModel]()
+    @Published var sections = [String]()
     
     func getProductSearchResult(for name: String, page: Int) {
         webService.getBrandSearchResultsPublisher(for: name, page: page)
@@ -29,7 +30,17 @@ class ProductListViewModel: ObservableObject {
                 }
             }) { products in
                 self.searchResults = products.results.map(ProductViewModel.init)
+                self.getSectionHeaders()
         }.store(in: &self.cancellableSet)
     }
     
+    func getSectionHeaders() {
+        var arr = [String]()
+        if !self.searchResults.isEmpty {
+            for item in self.searchResults {
+                arr.append(item.productCategory)
+            }
+            self.sections = Array(Set(arr))
+        }
+    }
 }

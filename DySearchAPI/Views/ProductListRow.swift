@@ -12,11 +12,12 @@ struct ProductListRow: View {
     var product: ProductViewModel
     
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 6) {
                 ProductName(product: product)
                 StockState(product: product)
             }
+            Spacer()
             PriceLabel(product: product)
         }.padding(.vertical)
     }
@@ -28,6 +29,7 @@ struct ProductListRow: View {
         var body: some View {
             Text(product.productName)
                 .font(.headline)
+                .foregroundColor(.primary)
         }
     }
     
@@ -36,16 +38,34 @@ struct ProductListRow: View {
         
         var body: some View {
             Text(product.inStock)
-                .font(.subheadline)
+                .font(.system(size: 12, weight: .regular, design: .default))
+                .foregroundColor(.gray)
         }
     }
+    
+//    fileprivate func createPriceLabel() -> some View {
+//
+//    }
     
     struct PriceLabel: View {
         var product: ProductViewModel
         
         var body: some View {
-            Text(String(product.price))
-                .font(.subheadline)
+            if product.inStock == "Out-of-stock" {
+                return Text(String(product.price))
+                        .font(.system(size: 15, weight: .regular, design: .default))
+                        .padding(5)
+                        .background(Color.lightGray)
+                        .cornerRadius(10)
+                        .foregroundColor(.gray)
+            } else {
+                return Text(String(product.price))
+                .font(.system(size: 15, weight: .regular, design: .default))
+                .padding(5)
+                    .background(Color.lightBlue)
+                .cornerRadius(10)
+                .foregroundColor(.blue)
+            }
         }
     }
 }

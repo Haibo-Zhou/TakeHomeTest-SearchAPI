@@ -10,7 +10,7 @@ import Foundation
 
 struct ClientAPI {
     
-    // dummy apiKey
+    // dummy apiKey, should set it as encoded, e.g. store it in plist file.
     static var apiKey = "93fbede77aa1c2ccef9986ec04175542"
     
     enum Endpoints {
@@ -18,12 +18,12 @@ struct ClientAPI {
         static private let baseURL = "http://10.0.0.3:8080/"
         static private let apiKeyParam = "?api_key=\(ClientAPI.apiKey)"
 
-        case searchBrand(String)
+        case searchBrand(String, Int)
         
         var stringValue: String {
             switch self {
-            case .searchBrand(let query):
-                return ClientAPI.Endpoints.baseURL + "/search/brand" + Endpoints.apiKeyParam + "&query=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"
+            case .searchBrand(let query, let page):
+                return ClientAPI.Endpoints.baseURL + "/search/brand" + Endpoints.apiKeyParam + "&query=\(query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")&page=\(page)"
             }
         }
         

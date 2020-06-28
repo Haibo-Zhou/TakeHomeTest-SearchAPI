@@ -18,7 +18,22 @@ class GCDServer {
         let path = "/search/brand"
         webServer.addHandler(forMethod: "GET", path: path, request: GCDWebServerRequest.self, processBlock: { request in
             print("WebServer - GET detected")
-            return GCDWebServerDataResponse(jsonObject: JsonLoader().jsonStrToDict() ?? [])
+//            print("Request Query: \(request.query ?? ["FF":"GG"])")
+            
+            if let query = request.query {
+                if query["query"] == "dyson" {
+                    if let page = query["page"], Int(page)! <= 3 {
+                        return GCDWebServerDataResponse(jsonObject: JsonLoader().jsonStrToDict(forName: "mock-data-page\(page)") ?? [])
+                    } else {
+                        print("Page num cross the limit of 3.")
+                        return nil
+                    }
+                } else {
+                    print("keyword is not matched!")
+                    return nil
+                }
+            }
+            return nil
         })
         
         webServer.start(withPort: 8080, bonjourName: "My Test Site")

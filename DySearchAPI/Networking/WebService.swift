@@ -47,7 +47,7 @@ struct WebService {
         .eraseToAnyPublisher()
     }
     
-    func getBrandSearchResultsPublisher(for name: String) -> AnyPublisher<[Product], FailureReason> {
-        createPublisher(for: ClientAPI.Endpoints.searchBrand(name).url)
+    func getBrandSearchResultsPublisher(for name: String, page: Int) -> AnyPublisher<ProductsResult, FailureReason> {
+        createPublisher(for: ClientAPI.Endpoints.searchBrand(name, page).url)
     }
 }

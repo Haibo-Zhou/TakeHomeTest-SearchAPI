@@ -25,11 +25,11 @@ class JsonLoader {
         return nil
     }
     
-    func jsonStrToDict() -> [[String: Any]]? {
-        if let jsonData = loadFile(forName: "mock-data") {
+    func jsonStrToDict(forName name: String) -> [String: Any]? {
+        if let jsonData = loadFile(forName: name) {
             do {
-                if let jsonDict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [[String: Any]] {
-                    print(jsonDict[0])
+                if let jsonDict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                    print(jsonDict)
                     return jsonDict
                 }
             } catch let error as NSError {

@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+
+struct ProductsResult: Codable {
+    let page: Int
+    let totalPages: Int
+    let results: [Product]
+}
+
 struct Product: Codable {
     let brandName: String?
     let productName: String?
@@ -15,6 +22,4 @@ struct Product: Codable {
     let inStock: Bool?
     let price: CGFloat?
     let id: Int?
-    
-    
 }

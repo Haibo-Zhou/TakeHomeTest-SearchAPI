@@ -35,13 +35,6 @@ class BrandViewController: UIViewController {
         mockServer.initWebServer()
     }
     
-//    fileprivate func setupSearchBarListeners() {
-//        let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
-//        publisher.sink { (notification) in
-//            print(123)
-//        }
-//    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds

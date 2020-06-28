@@ -15,6 +15,7 @@ struct ProductSearchApp: View {
     @State private var selectedId = -1
 //    @State private var showSheet = false
     @State private var page = 1
+    let server = GCDServer()
     
     var body: some View {
         VStack {
@@ -34,6 +35,12 @@ struct ProductSearchApp: View {
                 // dismiss keyboard when scrolling begins
                 UIApplication.shared.endEditing()
             }))
+        }
+        .onAppear() {
+            self.server.initWebServer()
+        }
+        .onDisappear() {
+            self.server.stopWebServer()
         }
     }
     

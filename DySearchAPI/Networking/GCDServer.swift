@@ -12,6 +12,7 @@ import GCDWebServer
 class GCDServer {
     
     lazy var webServer = GCDWebServer()
+    static var serverURL: URL!
     
     func initWebServer() {
         
@@ -36,13 +37,21 @@ class GCDServer {
             return nil
         })
         
-        webServer.start(withPort: 8080, bonjourName: "My Test Site")
+        // Binding server to localhost
+        do {
+            try webServer.start(options: ["Port": 8080, "BindToLocalhost": true])
+        } catch {
+            print(error)
+        }
+         
+//        webServer.start(withPort: 8080, bonjourName: "My Test Site")
         
         DispatchQueue.main.async {
             if let serverURL = self.webServer.serverURL {
+                GCDServer.serverURL = serverURL
                 print("VISIT \(serverURL) in your web browser")
             } else {
-                print("Not connected!")
+                print("Not connected with network!")
             }
         }
     }
